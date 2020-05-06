@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="550.0" minWidth="900.0" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="150.0" minHeight="80.0" prefHeight="110.0" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="442.20000610351565" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+        <tabs>
+            <Tab text="Admissions">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="411.2" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="307.4000183105469" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="tblAdmissions" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn fx:id="admissionID" prefWidth="90.39995574951172" text="AdmissionID" />
+                                    <TableColumn fx:id="admissionPatientInfo" prefWidth="180.0" text="Patient" />
+                                    <TableColumn fx:id="admissionAdmissionDate" prefWidth="111.20001220703125" text="Admitted" />
+                                    <TableColumn fx:id="admissionDischargeDate" prefWidth="111.20001220703125" text="Discharged" />
+                                    <TableColumn fx:id="admissionRoomInfo" prefWidth="210.39999389648438" text="Room" />
+                                    <TableColumn fx:id="admissionStaffInfo" prefWidth="216.79986572265625" text="Admitted By" />
+                                 </columns>
+                              </TableView>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onAddAdmission" text="Add" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <ImageView fitHeight="67.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <image>
+                                          <Image url="@../resources/png/admissions.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Patients">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="411.2" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="307.4000183105469" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="tblPatients" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn fx:id="patientID" prefWidth="75.0" text="PatientID" />
+                                    <TableColumn fx:id="patientFirstName" prefWidth="137.59993743896484" text="First Name" />
+                                    <TableColumn fx:id="patientSurname" prefWidth="136.800048828125" text="Surname" />
+                                    <TableColumn fx:id="patientStatus" prefWidth="107.20001220703125" text="Status" />
+                                    <TableColumn fx:id="patientCurrentDiagnosis" prefWidth="156.00009155273438" text="Current Diagnosis" />
+                                    <TableColumn fx:id="patientContact" prefWidth="130.0" text="Contact" />
+                                    <TableColumn fx:id="patientAddress" prefWidth="250.0" text="Address" />
+                                 </columns>
+                              </TableView>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onAddPatient" text="Add" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <ImageView fitHeight="67.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <image>
+                                          <Image url="@../resources/png/patients.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Rooms">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="411.2" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="307.4000183105469" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="tblRooms" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn fx:id="roomID" prefWidth="75.0" text="RoomID" />
+                                    <TableColumn fx:id="roomDescription" prefWidth="198.4000244140625" text="Room Description" />
+                                    <TableColumn fx:id="roomCapacity" prefWidth="73.5999755859375" text="Capacity" />
+                                    <TableColumn fx:id="roomStatus" prefWidth="231.99996948242188" text="Status" />
+                                 </columns>
+                              </TableView>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onAddRoom" text="Add" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <ImageView fitHeight="67.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <image>
+                                          <Image url="@../resources/png/rooms.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Staff">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="411.2" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="307.4000183105469" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TableView fx:id="tblStaff" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                <columns>
+                                  <TableColumn fx:id="staffID" prefWidth="75.0" text="StaffID" />
+                                    <TableColumn fx:id="staffTitle" prefWidth="49.5999755859375" text="Title" />
+                                    <TableColumn fx:id="staffFirstName" prefWidth="155.20000457763672" text="First Name" />
+                                    <TableColumn fx:id="staffSurname" prefWidth="145.5999755859375" text="Surname" />
+                                    <TableColumn fx:id="staffPosition" prefWidth="95.20004272460938" text="Position" />
+                                    <TableColumn fx:id="staffStatus" prefWidth="100.0" text="Status" />
+                                    <TableColumn fx:id="staffContact" prefWidth="130.0" text="Contact" />
+                                    <TableColumn fx:id="staffAddress" prefWidth="250.0" text="Address" />
+                                </columns>
+                              </TableView>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onAddStaff" text="Add" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <ImageView fitHeight="67.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <image>
+                                          <Image url="@../resources/png/staff.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Medicine">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="411.2" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="307.4000183105469" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="tblMedicine" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="#" />
+                                    <TableColumn prefWidth="75.0" text="MedId" />
+                                    <TableColumn prefWidth="198.4000244140625" text="Name" />
+                                    <TableColumn prefWidth="73.5999755859375" text="Units" />
+                                    <TableColumn prefWidth="73.5999755859375" text="Quantity" />
+                                    <TableColumn prefWidth="426.4000549316406" text="Description" />
+                                 </columns>
+                              </TableView>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onAddMedicine" text="Add" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <ImageView fitHeight="67.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <image>
+                                          <Image url="@../resources/png/medicine.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Hospital Status Summary" textFill="#828282" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <ProgressBar fx:id="prgPatients" maxHeight="10.0" prefHeight="10.0" prefWidth="200.0" progress="0.45" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="5.0" />
+                     </GridPane.margin>
+                  </ProgressBar>
+                  <Label fx:id="txtPatientsStatus" text="45 Patients Admitted" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ProgressBar fx:id="prgStaff" prefHeight="10.0" prefWidth="200.0" progress="0.75" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="20.0" />
+                     </GridPane.margin>
+                  </ProgressBar>
+                  <Label fx:id="txtStaffStatus" text="75 Staff on Duty" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="20.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label fx:id="lblCurrentUser" text="User: Alec" textFill="#6c3b6a" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="92.00000610351563" minHeight="10.0" prefHeight="87.19999389648437" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="49.599996948242186" minHeight="10.0" prefHeight="22.400006103515622" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@../resources/png/logo.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label text="Kennedy Hospital" textFill="#104905" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Italic" size="10.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
