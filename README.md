@@ -12,7 +12,7 @@ Hospital Management System
 </p>
 
 ## About the Project
-This project was done in partial fulfilment of the requirements for the course SCS2108 at [NUST](https://nust.ac.zw) in the year 2019, Computer Science Department.
+This project was done as a group project in partial fulfilment of the requirements for the course SCS2108 at [NUST](https://nust.ac.zw) in the year 2019, Computer Science Department.
 
 ## Tools
 Built using the following tools:
