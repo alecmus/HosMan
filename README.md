@@ -1,9 +1,6 @@
 # HosMan
 Hospital Management System
 
-<p>
-  <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/alecmus/HosMan">
-</p>
 
 #### Release Info
 <p>
